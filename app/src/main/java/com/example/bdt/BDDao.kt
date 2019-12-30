@@ -8,11 +8,19 @@ interface BDDao {
 
     @Insert
     suspend fun insertBD(bd:BD)
+
+    @Update
+    suspend fun updateBD(bd:BD)
+
+    @Delete
+    suspend fun deleteBD(bd:BD)
+
+
     @Query("SELECT * FROM birthday")
-    suspend fun getALLBD(): LiveData<List<BD>>
+    fun getALLBD(): LiveData<List<BD>>
 
     @Query("SELECT * FROM birthday WHERE id=ID")
-    suspend fun getABD():BD
+    fun getABD(ID:Int):BD
 
 
 }

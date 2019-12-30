@@ -5,6 +5,5 @@ import java.util.*
 
 @Entity(tableName="birthday")
 class BD (
-@PrimaryKey(autoGenerate = true) val id: Int, val name:String,val dob: Date){
+@PrimaryKey(autoGenerate = true) val id: Int, val name:String,val dob: String)
 
-}
